@@ -4,11 +4,13 @@ import datetime as f
 #Por lo tanto hay que transformarlo a STRING
 fecha=str(f.date.today())
 #cambio
-for i in range(1,26,1):
-    if (i==5 or i==10 or i==15 or i==20 or i==25 ):
-        print(i) # \n
-    else:
-        print(i, end="\t")
+#ahora definire las funciones del codigo
+def imprime_numero_kino():
+    for i in range(1,26,1):
+        if (i==5 or i==10 or i==15 or i==20 ):
+             print(i) # \n
+        else:
+             print(i, end="\t")
 
 numeros_comprados=[]
 
