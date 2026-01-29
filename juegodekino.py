@@ -14,14 +14,18 @@ def imprime_numero_kino():
 
 numeros_comprados=[]
 
-for i in range(14):
-    num=r.randint(1,25) # Genera un número entre 1 y 25
+def seleciona_azar():
+    #para poder utilizar la lista que vive fuera de la funcion
+    #necesito decirle a python que la busque fuera de la funcion mediante la palabra global
+    global numeros_comprados
+    for i in range(14):
+        num=r.randint(1,25) # Genera un número entre 1 y 25
 
-    while num in numeros_comprados:
-        num=r.randint(1,25) # Si el número generado ya esta
+        while num in numeros_comprados:
+            num=r.randint(1,25) # Si el número generado ya esta
                             # en la lista... se vuelve a generar
-    else:
-        numeros_comprados.append(num) # Si no estaba en la lista.. 
+        else:
+             numeros_comprados.append(num) # Si no estaba en la lista.. 
                                       # Entonces lo guardamos..se agrega!
 
 
